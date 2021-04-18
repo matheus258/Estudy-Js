@@ -1,3 +1,8 @@
 //alert('mensagem selecionada.');
-//confirm('Deseja realmente confirmar?');
-prompt("Qual seu nome?"); 
+//prompt("Qual seu nome?"); 
+const confirma = confirm('Deseja realmente confirmar?')
+    if (confirma == true){
+        
+    }
+
+      

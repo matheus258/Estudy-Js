@@ -6,11 +6,18 @@ function Produto(nome, preco, estoque){
 
     Object.defineProperty(this, 'estoque', {
         enumerable: true, // mostra a chave
-        value: estoque, //Valor
-        writable: true, // pode alterar
-        configurable: true // configurável
+        configurable: true, // configurável
+        get: function(){
+            return estoque;
+        },
+        set: function(valor){
+            if (typeof valor !== Number){
+                console.log("Bad Value, no is it Number.");
+                return;
+            };
+        }
     });
 }
 
-const p1 = new Produto('Camiseta', 20, 5) 
+const p1 = new Produto('Camiseta', 20, 5);
 console.log(p1);

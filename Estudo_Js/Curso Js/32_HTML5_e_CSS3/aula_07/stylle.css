@@ -1,0 +1,32 @@
+
+body {
+  background-color: #cecbbf25;
+  margin: 100px;
+  padding: 5px;
+
+}
+h1 {
+  color: #4c96d3;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  
+}
+.address{
+  background-color: rgba(224, 252, 102, 0.226);
+  border-radius: 2%;
+}
+.test {
+  background-color: rgba(127, 255, 212, 0.226);
+  border-radius: 2%;
+}
+.container {
+  background-color: #fff;
+  background-size: auto;
+  text-align: justify;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+.footer {
+  background-color: rgba(238, 87, 87, 0.336);
+  border-radius: 2%;
+}

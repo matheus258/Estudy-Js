@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    align-items: center;
+
+}
+.box {
+    background-color: #c7e0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+
+    height: 50vh;
+}
+.container {
+    background-color: #EAEFF2;
+    height: 80px;
+    width: 900px;
+
+    display: flex;
+    border-radius: 8px;
+    align-items: center;
+    color: rgb(48, 49, 51);
+}
+
+.container h1 {
+    padding: 20px;
+    font-style: italic;
+}
+

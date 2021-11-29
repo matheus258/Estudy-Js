@@ -1,0 +1,29 @@
+//Detalha Bancos de Dados;
+
+show dbs;
+--------------
+
+// Seleciona ou cria db;
+
+use pessoasData;
+
+
+--------------
+
+// Criar apenas um objeto no DB selecionado;
+
+db.pessoas.insertOne({ nome:"Matheus", idade: 30, profissao: "Programador", esta_empregado: false  })
+
+OBS:
+.pessoas => é criada uma coleção dentro de pessoasData. Poderia ser usada outra coleção, como carros, objetos, ou algo  especifico em um projeto.
+
+--------------
+
+// Criar mais de um objeto ao DB selecionado;
+
+db.pessoas.insertMany([
+  {nome:"João", idade: 40, profissao: "Arquiteto", esta_empregado: false},
+  {nome: "Maria", idade: 23, profissao: "Professora", esta_empregado: true}
+]);
+
+--------------

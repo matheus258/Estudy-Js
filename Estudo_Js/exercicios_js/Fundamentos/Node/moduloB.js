@@ -4,3 +4,5 @@ module.exports = {
         return 'Boa noite'
     }
 }
+
+//console.log(module.exports.boaNoite())

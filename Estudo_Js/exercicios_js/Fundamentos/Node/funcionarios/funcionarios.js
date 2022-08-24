@@ -5,12 +5,12 @@ axios.get(url).then(response => {
     const funcionarios = response.data
 
     const filtroFuncionarios = funcionarios.filter((e) => {
-        return e.pais === "China" && e.genero === "F"
+        return e.pais === "Brazil" && e.genero === "F"
     })
 
     filtroFuncionarios.sort(function(primeiroSalario, segundoSalario) {
         return primeiroSalario.salario - segundoSalario.salario;
     })
 
-console.log(filtroFuncionarios[0])
+    console.log(filtroFuncionarios[0])
 })

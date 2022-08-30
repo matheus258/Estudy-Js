@@ -11,3 +11,4 @@ fs.readFile(caminho, 'utf-8', (err, conteudo) => {
     const config = JSON.parse(conteudo)
     console.log(`${config.db.host}:${config.db.port}`)
 })
+

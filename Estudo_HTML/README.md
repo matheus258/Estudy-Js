@@ -1,4 +1,4 @@
-#  Estudy-HTML
+# Estudy-HTML
 
  📕 exercicios-HTML através de pesquisas utilizando:
 

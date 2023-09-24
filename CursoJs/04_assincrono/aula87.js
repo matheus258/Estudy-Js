@@ -1,3 +1,5 @@
+document.write('TESTES COM PROMISSES APERTE F12')
+
 // criação promessa
 
 const myPromisse = new Promise((resolve,reject)=> {
@@ -46,3 +48,32 @@ myPromisse2.then((data)=>{
 .catch((e)=>{
     console.error(e); // Tratamento do erro
 })
+
+// Resolver várias promessas com ALL
+const p1 = new Promise((resolve, reject) => {
+    resolve('P1, OK');
+})
+const p2 = new Promise((resolve, reject) => {
+    resolve('p2, ok');
+})
+const p3 = new Promise((resolve, reject) => {
+    resolve('p3, ok');
+})
+
+const resolveAll = Promise.all([p1,p2,p3]).then((data) => {
+    console.table(data);
+})
+
+// Resolvendo várias promessas com RACE
+
+// A primeira resolvida vai ser retornada
+const p4 = new Promise((resolve, reject) => {
+    resolve('P4, OK');
+})
+const p5 = new Promise((resolve, reject) => {
+    resolve('p5, ok');
+})
+const p6 = new Promise((resolve, reject) => {
+    resolve('p6, ok');
+})
+const resolveAllRace = Promise.race([p4,p5,p6])  .then ((data)=>console.log (data));

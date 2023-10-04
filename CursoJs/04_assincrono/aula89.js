@@ -35,3 +35,40 @@ async function mostraUsuario(id){
 }
 
 mostraUsuario(12);
+
+// udemy exemplo simples com Otávio Miranda.
+
+function esperaAi(msg, tempo){
+
+    // Funcao para retornar frase em determinado tempo;
+    return new Promise((resolve, reject) =>{
+        if(typeof msg !== 'string') {
+            reject(`Erro: Bad value, '${msg}' não é um texto.`)
+            return;
+        }
+
+        setTimeout(()=>{
+            console.log(msg);
+            resolve('');
+        }, tempo);
+    })
+
+}
+
+async function executa(){
+    try{
+
+        let b = await esperaAi('Primeira', 1000);
+
+        let c = await esperaAi('Segunda', 2000)
+
+        let d = await esperaAi('Terceira', 1000)
+
+        const a = await esperaAi("A",3500);// Aguardando o resultado da promise
+        const e = await esperaAi(1, 2000)
+
+        const f = await esperaAi('Epa', 1000)
+    } catch(e){console.log(e)}
+}
+
+executa();

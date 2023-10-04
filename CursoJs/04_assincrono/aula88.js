@@ -1,5 +1,8 @@
 // Fetch request na API GitHub
 
+document.write('<h1><strong>Fetch request na API GitHub</strong></h1>')
+document.write('<h1><strong>Press F12</strong></h1>')
+
 const userName = 'matheus258';
 
 fetch (`https://api.github.com/users/${userName}`, {

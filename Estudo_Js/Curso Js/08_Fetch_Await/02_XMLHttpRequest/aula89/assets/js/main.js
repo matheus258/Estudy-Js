@@ -24,5 +24,21 @@ document.addEventListener('click', e => {
 
 function carregaPagina(el){
   const href = el.getAttribute('href');
-  console.log(href)
+
+  const objConfig = {
+    method: "GET",
+    url: href,
+    success(response){
+      carregaResultado(response);
+    },
+    error(errorText){
+      console.log(errorText)
+    }
+  }
+
+  request(objConfig);
+}
+
+function carregaResultado(response) {
+
 }

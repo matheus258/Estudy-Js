@@ -9,7 +9,12 @@ exports.paginaInicial = (req, res) => {
 }
 
 exports.trataPost = (req, res) => {
-    let nome = req.body; // pega o valor do input name="nome"
-    res.send(`Ei sou sua rota de Post <br> ${req.body}`)
+    // let nome = req.body; // pega o valor do input name="nome"
+    // console.log(nome);
+    // if(!nome){
+    //         return res.status(400).json({erros: ['Não enviou um nome']
+    //     })
+    // }
+    res.send(`Ei sou sua rota de Post <br>`)
 
 }

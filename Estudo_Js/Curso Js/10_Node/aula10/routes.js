@@ -1,9 +1,9 @@
 const express = require('express')
 const route = express.Router();
 // Import Controllers
-const homeController = require('./controllers/homeController');
-const contatoController = require('./controllers/contatoController');
-const formularioController = require('./controllers/formularioController')
+const homeController = require('./src/controllers/homeController');
+const contatoController = require('./src/controllers/contatoController');
+const formularioController = require('./src/controllers/formularioController')
 
 // Rota Home
 route.get('/', homeController.paginaInicial)

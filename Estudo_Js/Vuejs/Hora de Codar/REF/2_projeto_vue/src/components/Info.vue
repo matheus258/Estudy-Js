@@ -9,6 +9,7 @@
             <li>React</li>
             <li>Node</li>
         </ul>
+        <p v-show="email" >Mande uma mensagem para {{ email }}</p>
     </div>
 </template>
 
@@ -17,7 +18,9 @@
         name: 'Info',
         data() {
             return {
-                esta_trabalhando: false
+                esta_trabalhando: false,
+                mostrar_email: true,
+                email: 'matheus@gmail.com'
             }
         }
     }

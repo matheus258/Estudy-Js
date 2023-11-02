@@ -9,7 +9,10 @@
             <li>React</li>
             <li>Node</li>
         </ul>
-        <p v-show="email" >Mande uma mensagem para {{ email }}</p>
+        <div>
+            <button @click='showEmail' >{{ textoButton}}</button>
+        </div>
+        <p v-show="mostrar_email" >Mande uma mensagem para {{ email }}</p>
         <p>Para acessar meu portifólio <a v-bind:href="meu_link" target="blank">basta clicar aqui</a></p>
         <Picture />
     </div>
@@ -25,9 +28,20 @@
         data() {
             return {
                 esta_trabalhando: false,
-                mostrar_email: true,
+                mostrar_email: false,
                 email: 'matheus@gmail.com',
-                meu_link: 'https://www.google.com.br/'
+                meu_link: 'https://www.google.com.br/',
+                textoButton: 'Mostrar e-mail'
+            }
+        },
+        methods:{
+            showEmail(){
+                this.mostrar_email = !this.mostrar_email
+                if(!this.mostrar_email){
+                    this.textoButton = "Mostrar e-mail"
+                } else {
+                    this.textoButton = 'Ocultar e-mail'
+                }
             }
         }
     }

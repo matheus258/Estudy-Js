@@ -1,15 +1,29 @@
 <template>
     <div>
+        <h2>Meu formulário</h2>
         <form action="">
-            <input type="text"/><br/>
-            <input type="text"/><br/>
-            <input type="text"/><br/>
+            <div>
+                <InputText />
+            </div>
+            <div>
+                <InputText />
+            </div>
+            <div>
+                <SubmitForm />
+            </div>
         </form>
     </div>
 </template>
 
 <script>
+    import InputText from './Form/FormText.vue';
+    import SubmitForm from './Form/Submit.vue';
+
     export default {
-        name: 'Form'
+        name: 'Form',
+        components: {
+            InputText,
+            SubmitForm
+        }
     }
 </script>

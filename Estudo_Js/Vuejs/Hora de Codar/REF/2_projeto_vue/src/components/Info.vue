@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>Estou trabalhando como Analista</p>
+        <p v-if="esta_trabalhando">Estou trabalhando como Analista</p>
         <p>Utilizo as seguintes tecnologias:</p>
         <ul>
             <li>JavaScript</li>
@@ -15,7 +15,9 @@
     export default {
         name: 'Info',
         data() {
-
+            return {
+                esta_trabalhando: false
+            }
         }
     }
 </script>

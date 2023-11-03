@@ -23,8 +23,11 @@ export default {
             this.nome = 'Pedro'
         }, 3000)
         // this.nome = 'Pedro'
+    },
+    methods: {
+        lifeCycle(){
+
+        }
     }
 }
 </script>
-
-

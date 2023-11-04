@@ -4,10 +4,7 @@
         <p v-else>Estou em busca de novas oportunidades</p>
         <p>Utilizo as seguintes tecnologias:</p>
         <ul>
-            <li>JavaScript</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>Node</li>
+            <li v-for="tecnologias, index in backend_array" v-bind:key="index" >{{tecnologias}}</li>
         </ul>
         <div>
             <button @click='showEmail' >{{ textoButton}}</button>
@@ -31,7 +28,8 @@
                 mostrar_email: false,
                 email: 'matheus@gmail.com',
                 meu_link: 'https://www.google.com.br/',
-                textoButton: 'Mostrar e-mail'
+                textoButton: 'Mostrar e-mail',
+                backend_array: ['Node','Express','Ajax','Json','API', 'Axios']
             }
         },
         methods:{

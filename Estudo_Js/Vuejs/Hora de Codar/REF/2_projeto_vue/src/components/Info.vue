@@ -2,12 +2,15 @@
     <div>
         <p v-if="esta_trabalhando">Estou trabalhando como Analista</p>
         <p v-else>Estou em busca de novas oportunidades</p>
+        <p>Estudo as seguintes tecnologias:</p>
+        <ul>
+            <li v-for="tecnologias, index in backend_array" v-bind:key="index" >{{tecnologias}}</li>
+        </ul>
         <p>Utilizo as seguintes tecnologias:</p>
         <ul>
-            <li>JavaScript</li>
-            <li>Vue</li>
-            <li>React</li>
-            <li>Node</li>
+            <li v-for="tec, index in tecnologiaUsada" v-bind:key="index">
+                {{ tec }}
+            </li>
         </ul>
         <div>
             <button @click='showEmail' >{{ textoButton}}</button>
@@ -31,7 +34,9 @@
                 mostrar_email: false,
                 email: 'matheus@gmail.com',
                 meu_link: 'https://www.google.com.br/',
-                textoButton: 'Mostrar e-mail'
+                textoButton: 'Mostrar e-mail',
+                backend_array: ['Node','Express','Ajax','Json','API', 'Axios'],
+                tecnologiaUsada: ['JavaScript', 'HTML', 'CSS', 'GIT', 'NODE', 'Vue', 'Python', 'Axios']
             }
         },
         methods:{

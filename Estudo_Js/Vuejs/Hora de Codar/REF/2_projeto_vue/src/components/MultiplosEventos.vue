@@ -1,6 +1,6 @@
 <template>
     <div>
-        <button @click="primeiro($event), segundo($event)">Ativar mútiplos eventos</button>
+        <button @click="primeiro($event), segundo($event), terceiro(txt1, $event)">Ativar mútiplos eventos</button> <!-- Terceiro recebe texto Definido no DATA -->
         <p>{{ multiplos_eventos }}</p>
     </div>
 </template>
@@ -8,9 +8,11 @@
 <script>
 export default {
     name: 'MultiplosEventos',
+
     data() {
         return{
-            multiplos_eventos: ''
+            multiplos_eventos: '',
+            txt1: 'Texto Definido',
         }
     },
     methods: {
@@ -20,6 +22,11 @@ export default {
         segundo(e){
             setTimeout(() => {
                 this.multiplos_eventos += ' Segundo evento ativado!'
+            }, 1000)
+        },
+        terceiro(txt1, e) { // Usa o texto definido.
+            setInterval(() => {
+                this.multiplos_eventos = txt1;
             }, 2000)
         }
     }

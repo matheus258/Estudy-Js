@@ -1,5 +1,6 @@
 <template>
     <div>
+        <p>Contato Profissional: {{compEmail}}</p>
         <p v-if="esta_trabalhando">Estou trabalhando como Analista</p>
         <p v-else>Estou em busca de novas oportunidades</p>
         <p>Estudo as seguintes tecnologias:</p>
@@ -27,6 +28,9 @@
         name: 'Info',
         components: {
             Picture
+        },
+        props: {
+            compEmail: String
         },
         data() {
             return {

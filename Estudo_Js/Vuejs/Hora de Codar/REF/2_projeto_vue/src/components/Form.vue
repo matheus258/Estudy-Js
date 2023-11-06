@@ -1,12 +1,15 @@
 <template>
     <div>
         <h2>Meu formulário</h2>
-        <form action="">
+        <form action="" @submit="nameInput($event)">
             <div>
-                <InputText />
+                <InputText /> <!--v-model="name" -->
             </div>
             <div>
-                <InputText />
+                <InputText /> <!--v-model="sobrenome"-->
+            </div>
+            <div>
+                <input type="text" v-model="frase">
             </div>
             <div>
                 <SubmitForm />
@@ -24,6 +27,23 @@
         components: {
             InputText,
             SubmitForm
+        },
+        data () {
+            return {
+                name: '',
+                sobrenome: '',
+                frase: ''
+            }
+        },
+        methods: {
+            nameInput(e){
+                e.preventDefault();
+
+                console.log(this.name)
+                console.log(this.sobrenome)
+                console.log(this.frase)
+
+            }
         }
     }
 </script>

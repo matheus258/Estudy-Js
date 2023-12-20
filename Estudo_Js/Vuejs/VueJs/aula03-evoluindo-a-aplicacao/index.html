@@ -8,8 +8,15 @@
 
     <div id="app">
         <p>{{ mensagem }}</p>
-        <p>Meu nome é: {{ nome }}</p>
+        <!-- v-once prioriza a forma original do elemento -->
+        <p v-once>Meu nome é: {{ nome }}</p>
+        <!-- Interpolção HTML -->
+        <p v-html="curso"></p>
+        <p>Nome de acordo com input: {{nome}}</p>
         <input v-on:input="mudarNome">
+        <button v-on:="mostrarNome">Mostrar Nome</button>
+        <!-- v-bind para acessar elementos estaticos -->
+        <a v-bind:href="google">Acesse ao Google</a>
     </div>
 
     <script type="text/javascript">
@@ -18,11 +25,17 @@
             el: '#app',
             data: {
                 mensagem: 'Olá VueJS',
-                nome: ''
+                nome: 'Jess',
+                instrutor: 'Plinio Naves',
+                google: 'https://www.google.com',
+                curso: '<strong>VueJs</strong> <span style="color: red";>do basico ao avançado</ span>'
             },
             methods: {
                 mudarNome: function(event) {
-                    this.nome = event.target.value;
+                    this.nome = event.target.value
+                },
+                mostrarNome: function(){
+                    alert('this.nome');
                 }
             }
         });

@@ -50,3 +50,16 @@ const enviarEmail = (objetoEmail) => {
 };
 
 novos.forEach((objetoEmail) => enviarEmail(objetoEmail));
+
+// tratamento de erros
+try {
+  const idade = 15;
+
+  if (idade < 18) {
+    throw new Error("Você deve ter pelo menos 18 anos para tirar a CNH.");
+  } else if (idade >= 18) {
+    console.log("Maior de idade");
+  }
+} catch (error) {
+  console.log(error);
+}

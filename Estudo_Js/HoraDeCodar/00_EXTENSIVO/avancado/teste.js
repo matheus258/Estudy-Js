@@ -1,10 +1,33 @@
-let produtos = ["camisa-PP", "camisa-M", "camisa-G"];
+let produtos = [
+  "camisa-PP",
+  "camisa-M",
+  "camisa-G",
+  "camisa-GG",
+  "camisa-GG",
+  "camiseta-PP",
+  "camiseta-G",
+  "cueca-M",
+  "blusa-XG",
+  "blusa-XG",
+  "blusa-XG",
+  "blusa-P",
+];
 
-let nn = produtos.map((produtosString) => {
-  const [tipo, tamanho] = produtosString.split("-");
-  return `Tipo: ${tipo}, Tamanho: ${tamanho}`;
+let newObt;
+let x;
+
+newObt = produtos.map((produto, tamanho) => {
+  for (let i = 0; i < produtos.length; i++) {
+    const [produto, tamanho] = produtos[i].split("-"); // criar um map para teste.
+
+    console.log(produtos[i]);
+  }
+  return `Produto: ${produto} | Tamanho: ${tamanho + 1}`;
 });
 
-console.log(nn);
+console.log(newObt);
 
-// Esse arquivo foi criado para teste de como separar cada propiedade de um array com map e split
+let resultado = produtos[0].split("-");
+
+console.log(newObt);
+// console.log(resultado);

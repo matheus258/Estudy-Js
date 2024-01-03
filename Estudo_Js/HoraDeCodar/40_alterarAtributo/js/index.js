@@ -11,22 +11,22 @@ button.setAttribute("class", "buttonLigar");
 let nomeButton = document.querySelector(".buttonLigar");
 nomeButton.textContent = "Desligar";
 
-let x = true;
+let trocaDeImagem = true;
 
 function mudarImg() {
-  if (x) {
+  if (trocaDeImagem) {
     img.setAttribute(
       "src",
       "https://img.freepik.com/vetores-gratis/lampada-realista-isolada_1284-41741.jpg"
     );
-    x = false;
+    trocaDeImagem = false;
     nomeButton.textContent = "ligar";
   } else {
     img.setAttribute(
       "src",
       "https://img.freepik.com/fotos-premium/uma-lampada-acesa-com-uma-lampada-ao-fundo_745528-6572.jpg"
     );
-    x = true;
+    trocaDeImagem = true;
     nomeButton.textContent = "Desligar";
   }
 }

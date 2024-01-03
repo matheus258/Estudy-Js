@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #0E1217;
+  color: #fff;
+}
+
+#todoList {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titlePrincipal {
+  color: #FB528E;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 50px 0;
+}
+
+.campoLista input {
+  height: 38px;
+  width: 500px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #1b1b1b;
+  font-weight: 800;
+  padding-left: 10px;
+  border-radius: 8px;
+}
+
+.campoLista button {
+  height: 38px;
+  width: 40px;
+  border-radius: 5px;
+  background-color: cadetblue;
+  cursor: pointer;
+}
+
+/* Lista de Tarefas */
+#tasksListContainer {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+
+}
+
+#tasksListContainer h2 {
+  color: #FB528E;
+  text-decoration: underline;
+
+}
+
+#taskList {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.taskBox {
+  background-color: #89B1BE;
+  color: #1b1b1b;
+  font-weight: 900;
+  font-size: large;
+  border: #fff solid 1px;
+  margin-bottom: 15px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  text-align: left;
+  padding-left: 15px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.taskBox ion-icon {
+  position: absolute;
+  top: 0;
+  height: 30px;
+  cursor: pointer;
+  transition: .5s;
+  width: 30px;
+  padding: 5px;
+}
+
+.doneBtn {
+  right: 40px;
+}
+
+.doneBtn:hover {
+  color: #fff;
+  background-color: #09e01b;
+}
+
+.removeBtn {
+  right: 0;
+}
+
+.removeBtn:hover {
+  color: #fff;
+  background-color: red;
+}
+
+.hide {
+  display: none;
+}
